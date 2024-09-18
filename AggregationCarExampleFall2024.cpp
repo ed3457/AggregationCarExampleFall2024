@@ -2,10 +2,25 @@
 //
 
 #include <iostream>
-
+#include "Car.h"
+#include "Wheel.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+	Wheel w1(20);
+	Wheel w2(20);
+	Wheel w3(20);
+	Wheel w4(20);
+
+	Car Jeep1;
+	Jeep1.setMake("Jeep Compass");
+	Jeep1.setVin("1VKPr54tte4t");
+	Jeep1.setWheel(0, w1);
+	Jeep1.setWheel(1, w2);
+	Jeep1.setWheel(2, w3);
+	Jeep1.setWheel(3, w4);
+
+	cout << Jeep1.getWheel(1).getDiameter() << endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
