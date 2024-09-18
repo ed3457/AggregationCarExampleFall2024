@@ -10,7 +10,7 @@ private:
 	string vin; 
 public:
 	void setWheel(int index, Wheel w); 
-	Wheel getWheel(int index);
+	Wheel & getWheel(int index);
 
 	void setMake(string m);
 	string getMake();

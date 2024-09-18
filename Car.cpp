@@ -1,17 +1,17 @@
 #include "Car.h"
-
+#include <iostream>
+using namespace std; 
 void Car::setWheel(int index, Wheel w)
 {   
 	if (index<4 && index>=0)
 	Wheels[index] = w;
 }
 
-Wheel Car::getWheel(int index)
+Wheel & Car::getWheel(int index)
 {
 	if (index < 4 && index >= 0)
 		return Wheels[index];
-	else
-		return NULL; 
+	
 }
 
 void Car::setMake(string m)
@@ -36,5 +36,10 @@ string Car::getVin()
 
 void Car::PrintCarInfo()
 {
+	// print car make, car vin, and the diameter for all the wheels 
+	cout << getMake() << endl;
+	cout << getVin() << endl;
 
+	for (int i = 0; i < 4; i++)
+		cout << "Wheel "<<i <<" " << getWheel(i).getDiameter() << endl;
 }

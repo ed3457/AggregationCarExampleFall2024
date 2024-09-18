@@ -19,8 +19,12 @@ int main()
 	Jeep1.setWheel(2, w3);
 	Jeep1.setWheel(3, w4);
 
-	cout << Jeep1.getWheel(1).getDiameter() << endl;
+	//cout << Jeep1.getWheel(1).getDiameter() << endl;
 
+	Jeep1.getWheel(2).setDiameter(25);
+	Jeep1.getWheel(3).setDiameter(25);
+
+	Jeep1.PrintCarInfo();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
